@@ -1,5 +1,5 @@
 /* * {
-    outline: 1px solid tomato;
+  outline: 1px solid tomato;
 } */
 
 .wrap {}
@@ -12,6 +12,8 @@
   background: #fff;
   z-index: 999;
   line-height: 80px;
+
+  border-bottom: 1px solid #e6e6e6c7;
 }
 
 .Header h1 {
@@ -23,6 +25,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+
+
 }
 
 .Header .gnb {
@@ -64,7 +68,7 @@
   display: flex;
   gap: 50px;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .Header .gnb>ul {
@@ -85,13 +89,13 @@
   top: 100px;
   left: 50%;
   font-size: 15px;
-  background: rgb(80, 80, 80);
+  background: #fff;
   line-height: 47px;
   z-index: 1;
   transition: 0.4s;
   opacity: 0;
   visibility: hidden;
-  border: 1px solid #ddd;
+  border: 1px solid #20212493;
   transform: translate(-50%, 0);
 }
 
@@ -102,13 +106,14 @@
 }
 
 .Header .gnb>ul>li .sub a {
-  padding: 0 24px;
-  font-size: 14px;
-  color: #fff;
+  padding: 0 26px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #202124;
 }
 
 .Header .gnb>ul>li .sub>li~li {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #20212493;
 }
 
 .visual_slide video {
@@ -135,7 +140,7 @@
   font-size: 48px;
   font-weight: 100;
   color: #fff;
-  text-shadow: 0 0 3px #000;
+  text-shadow: 2px 3px 10px #000;
 }
 
 .visual_slide .slogan span {
@@ -144,7 +149,7 @@
   font-size: 48px;
   font-weight: 100;
   color: #fff;
-  text-shadow: 0 0 3px #000;
+  text-shadow: 2px 3px 10px #000;
 }
 
 .visual_slide .slogan p {
@@ -153,7 +158,7 @@
   font-size: 64px;
   font-weight: 700;
   color: #fff;
-  text-shadow: 0 0 3px #000;
+  text-shadow: 1px 3px 10px #000;
 }
 
 /* 섹션02 여기서부터 시작 */
@@ -174,11 +179,11 @@
 
 .main_content .slogan h2 {
   display: block;
-  margin: 20px auto;
-  font-size: 48px;
-  font-weight: 500;
+  margin: 0 0 20px auto;
+  font-size: 52px;
+  font-weight: 600;
   color: #505050;
-  text-shadow: 0 0 2px #000;
+
   opacity: 0;
   transform: translate(0, 100px);
 
@@ -186,13 +191,12 @@
 
 .main_content .slogan p {
   display: block;
-  margin: 10px auto;
+  margin: 0 0 30px auto;
   font-size: 18px;
   opacity: 0;
   line-height: 30px;
-  /* font-weight: 50; */
   color: #505050;
-  /* text-shadow: 0 0 3px #000; */
+
 }
 
 .main_content.on .slogan h2 {
@@ -202,6 +206,12 @@
 }
 
 .main_content.on .slogan p {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: 0.5s 0.4s;
+}
+
+.main_content.on .slogan .main_btn {
   opacity: 1;
   transform: translate(0, 0);
   transition: 0.5s 0.4s;
@@ -221,11 +231,14 @@
 .main_content .slogan .main_btn {
   font-weight: 400;
   text-align: center;
-  border: 1px solid #8d8d8d;
-  background: rgb(80 80 80 / 87%);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 1px 0;
+  border-top: 1px solid #aeaeae;
+  border-bottom: 1px solid #aeaeae;
+  background: transparent;
+  color: #202124;
+  font-size: 18px;
+  padding: 15px 40px;
+  /* border-radius: 1px 0; */
+  opacity: 0;
 }
 
 
@@ -269,14 +282,17 @@
 
 .mainSolution_Movie .slogan {
   position: absolute;
-  padding: 0 15px;
+  padding: 40px 120px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 1200px;
-  width: 100%;
   text-align: center;
   z-index: 999;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+  backdrop-filter: blur(2px);
 }
 
 .mainSolution_Movie .slogan h2 {
@@ -318,18 +334,24 @@
   transition: 0.5s 0.1s;
 }
 
+/* .mainSolution_Movieon.on .slogan .btn {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: 0.5s 0.1s;
+} */
+
 .mainSolution_Movie .slogan .btn {
   display: inline-block;
   text-align: center;
   border: 1px solid #fff;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(2px);
+
   color: #fff;
   padding: 16px 80px;
-  border-radius: 8px 0;
+  border-radius: 10px;
   transition: backdrop-filter 1s;
 
   position: relative;
+
 }
 
 .mainSolution_Movie .slogan .btn::after {
@@ -379,7 +401,6 @@
 }
 
 .footer .content_box {
-
   flex: 1;
   margin: 0 0 0 80px;
 }
@@ -397,6 +418,7 @@
   margin: 30px 80px 0 0;
   height: 30px;
   color: #ddd;
+
 }
 
 
@@ -404,11 +426,15 @@
   display: flex;
   gap: 60px;
   color: #fff;
+
+
 }
 
 
 .footer .address_wrap li {
   line-height: 25px;
+  font-size: 14px;
+
 }
 
 .footer .address_wrap .cu ul {
@@ -417,6 +443,7 @@
 
 .footer .address_wrap address {
   margin: 15px 0 0 0;
+  color: #727272;
 }
 
 .footer .address_wrap .sns {
