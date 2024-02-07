@@ -1,6 +1,6 @@
 $(function () {
     $('.main').fullpage({
-        anchors: ['01', '02', '03', '04'],
+        anchors: ['01', '02', '03', '04','05' ,'06'],
         afterLoad: function (a, b, c) {
             console.log(a, b, c);
             $('.section').removeClass('on');
@@ -23,6 +23,31 @@ $(function () {
             el: ".swiper-pagination",
             clickable: true,
         },
+    });
+
+    $('.tab_menu li a').on('click', function (e) {
+        e.preventDefault();
+        const idx = $(this).parent().index();
+        $('.tab_content li').removeClass('on');
+        $('.tab_content li').eq(idx).addClass('on');
+    });
+
+
+    new Swiper('.mm', {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    })
+
+    $('.main_tab_solution .bt_left').on('click', function () {
+        $('.main_tab_solution .tab_left_slide').slick('slickPrev');
+    });
+    $('.main_tab_solution .bt_right').on('click', function () {
+        $('.main_tab_solution .tab_right_slide').slick('slickNext');
     });
 
 })
