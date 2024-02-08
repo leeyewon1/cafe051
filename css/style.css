@@ -1,8 +1,8 @@
-/* * {
+* {
   outline: 1px solid tomato;
-} */
+}
 
-.swiper_sld {
+/* .swiper_sld {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -15,10 +15,8 @@
 
 .swiper_sld img {
   display: block;
-  /* width: 100%;
-  height: 100%; */
   object-fit: cover;
-}
+} */
 
 .wrap {}
 
@@ -181,6 +179,7 @@
 
 /* 섹션02 여기서부터 시작 */
 .main_content {
+  /* background: #fffffb; */
   position: relative;
 }
 
@@ -291,8 +290,9 @@
 /* main_tab_solution */
 
 .main_tab_solution {
+
   position: relative;
-  padding: 100px 0;
+
 }
 
 .main_tab_solution .title {
@@ -323,21 +323,32 @@
 }
 
 .main_tab_solution .tab_inner .tab_menu {
-  flex: 0 0 400px;
+  display: flex;
+  margin: 80px 0 0 0;
+
+  flex: 0 0 300px;
+  flex-direction: column;
+
   overflow: hidden;
   box-sizing: border-box;
   height: 200px;
-  margin: 80px 0 0 0;
+}
+
+
+.main_tab_solution .tab_menu li {
+  flex: 1;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.main_tab_solution .tab_menu li.on {
+  color: #FF0000;
 }
 
 .main_tab_solution .tab_inner .tab_content {
   flex: 1;
   overflow: hidden;
-}
-
-.main_tab_solution .tab_menu {
-  display: flex;
-  flex-direction: column;
 }
 
 .main_tab_solution .tab_content li {
@@ -350,6 +361,7 @@
   height: auto;
 }
 
+
 .main_tab_solution .tab_content li figure {
   display: flex;
   flex-direction: column;
@@ -358,24 +370,27 @@
   height: 500px;
 }
 
-.main_tab_solution .tab_content li figure.swiper_sld-active {
+
+.main_tab_solution .tab_content li figure.swiper-slide-active {
   flex: 1 0 500px;
 }
 
-
-.main_tab_solution .tab_menu li {
-  flex: 1;
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 40px;
+.main_tab_solution .tab_content li figure.swiper-slide-active .img_box {
+  /* object-fit: cover; */
 }
 
-.main_tab_solution .tab_menu li:hover a {
-  color: rgb(255, 61, 61);
+.main_tab_solution .tab_content li figure.swiper-slide-active .itm01 {
+
+  /* height: 500px; */
+  background: url(../images/tab_menu2-99.png)no-repeat center center/cover;
+  /* transform: scale(1.6); */
 }
 
+.main_tab_solution .tab_content li figure.swiper-slide-active .img_box img {
+  /* height: 700px; */
+  /* transform: scale(1.3); */
 
-
+}
 
 /* 섹션03 여기서부터 시작 */
 
@@ -408,10 +423,10 @@
 .mainSolution_Movie .slogan h2 {
   display: block;
   margin: 0 auto;
-  font-size: 50px;
+  font-size: 41px;
   font-weight: 500;
   color: #fff;
-  text-shadow:1px 1px 2px #000;
+  text-shadow: 2px 1px 1px #000;
   margin: 0 0 24px 0;
   opacity: 0;
   transform: scale(.95);
@@ -420,10 +435,10 @@
 .mainSolution_Movie .slogan p {
   display: block;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 17px;
   color: #fff;
   font-weight: 300;
-  text-shadow:2px 1px 0 #000;
+  /* text-shadow: 2px 1px 0 #000; */
   margin: 0 0 32px 0;
   opacity: 0;
 
@@ -455,13 +470,15 @@
   text-align: center;
   border: 2px solid #fff;
   color: #fff;
-  padding: 20px 60px;
+  padding: 15px 60px;
   border-radius: 10px;
   transition: backdrop-filter 1s;
 
   position: relative;
 
   opacity: 0;
+
+  text-shadow: 2px 1px 0 #000;
 
 }
 

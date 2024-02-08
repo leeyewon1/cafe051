@@ -1,6 +1,6 @@
 $(function () {
     $('.main').fullpage({
-        anchors: ['01', '02', '03', '04','05' ,'06'],
+        anchors: ['01', '02', '03', '04', '05', '06'],
         afterLoad: function (a, b, c) {
             console.log(a, b, c);
             $('.section').removeClass('on');
@@ -33,14 +33,16 @@ $(function () {
     });
 
 
-    new Swiper('.mm', {
+    var sl = new Swiper('.mm', {
         slidesPerView: 5,
+
         spaceBetween: 30,
         loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
+        autoplay: false,
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        // },
     })
 
     $('.main_tab_solution .bt_left').on('click', function () {
