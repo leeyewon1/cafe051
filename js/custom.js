@@ -25,11 +25,14 @@ $(function () {
         },
     });
 
-    $('.tab_menu li a').on('click', function (e) {
+    $('.tab_menu li').on('click', function (e) {
         e.preventDefault();
-        const idx = $(this).parent().index();
-        $('.tab_content li').removeClass('on');
-        $('.tab_content li').eq(idx).addClass('on');
+        const idx = $(this).index();
+        $('.tab_menu li').removeClass('on');
+        $('.tab_menu li').eq(idx).addClass('on');
+
+        $('.tab_content li').removeClass('on')
+        $('.tab_content li').eq(idx).addClass('on')
     });
 
 
@@ -39,10 +42,10 @@ $(function () {
         spaceBetween: 30,
         loop: true,
         autoplay: false,
-        // autoplay: {
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        // },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
     })
 
     $('.main_tab_solution .bt_left').on('click', function () {
