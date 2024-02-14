@@ -48,11 +48,11 @@ $(function () {
         },
     })
 
-    $('.main_tab_solution .bt_left').on('click', function () {
-        $('.main_tab_solution .tab_left_slide').slick('slickPrev');
-    });
-    $('.main_tab_solution .bt_right').on('click', function () {
-        $('.main_tab_solution .tab_right_slide').slick('slickNext');
-    });
+    // $('.main_tab_solution .bt_left').on('click', function () {
+    //     $('.main_tab_solution .tab_left_slide').slick('slickPrev');
+    // });
+    // $('.main_tab_solution .bt_right').on('click', function () {
+    //     $('.main_tab_solution .tab_right_slide').slick('slickNext');
+    // });
 
 })
