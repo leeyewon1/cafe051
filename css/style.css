@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid tomato--;
+  outline: 1px solid tomato;
 }
 
 .wrap {}
@@ -416,16 +416,12 @@
     height: 260px;
     width: 100%;
     background: url(../images/mbg.jpg);
-    /* clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); */
-    /* border-radius: 74% 26% 76% 24% / 45% 58% 42% 55%; */
+
     filter: brightness(0.5) grayscale(0.1);
   }
 
   .main_content .slogan {
-    position: absolute;
     padding: 0 15px;
-    top: 47%;
-    left: 50%;
     line-height: 60px;
     transform: translate(-50%, -50%);
     max-width: 1200px;
@@ -453,13 +449,12 @@
   .main_content .slogan p {
     display: block;
     margin: 0 0 21px auto;
-    font-size: 16px;
+    font-size: 17px;
     opacity: 0;
     line-height: 24px;
     color: #505050;
     word-break: keep-all;
 
-    font-size: 3.3vw;
   }
 
   .main_content.on .slogan h2 {
