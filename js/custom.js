@@ -1,4 +1,10 @@
 $(function () {
+
+    $('.Header .mopen').on('click', function () {
+        $('.gnb').toggleClass('on')
+    });
+
+
     $('.main').fullpage({
         responsiveWidth: 1200,
         anchors: ['01', '02', '03', '04', '05', '06'],
